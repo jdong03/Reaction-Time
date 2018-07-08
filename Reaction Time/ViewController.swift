@@ -9,15 +9,40 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet var collectionOfButtons: [UIButton]!
+    @IBOutlet weak var timerDisplay: UILabel!
+    var counter = 0
+    
+    
+    
+    @IBAction func ifButtonTapped(_ sender: UIButton) {
+        sender.isHidden = true
+        timerDisplay.text = String(counter)
+        if gameIsDone () {
+// UI View Stuff goes here
+        }
+    }
+    
+    func gameIsDone () -> Bool{
+        for button in collectionOfButtons {
+            if !button.isHidden {
+                return false
+            }
+        }
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+            self.counter += 1
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
 
 
