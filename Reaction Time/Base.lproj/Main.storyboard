@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gZi-BH-1xy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hgh-Qv-Rnr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--REACTION TIME GAME-->
         <scene sceneID="L8G-Nk-q3w">
             <objects>
                 <viewController id="gZi-BH-1xy" sceneMemberID="viewController">
@@ -45,9 +45,8 @@
                                 <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="70"/>
                                 <state key="normal" title="GO"/>
                                 <connections>
-                                    <action selector="goButton:" destination="5Iq-bM-W8i" eventType="touchUpInside" id="WQR-3K-5ng"/>
-                                    <action selector="goButtonTapped:" destination="5Iq-bM-W8i" eventType="touchUpInside" id="A0G-eu-iJY"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="6r4-uo-DLf"/>
+                                    <action selector="goButton:" destination="5Iq-bM-W8i" eventType="touchUpInside" id="zYy-Bo-VM8"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="q3f-Fy-Mvc"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Press GO and click on each of the circles to make them dissapear. See how fast you can complete the game" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4db-u7-d5d">
@@ -61,7 +60,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="6L5-u8-QkL"/>
                     </view>
-                    <navigationItem key="navigationItem" id="igA-CM-Kx3"/>
+                    <navigationItem key="navigationItem" title="REACTION TIME GAME" id="igA-CM-Kx3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aWl-uP-BUj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="5Iq-bM-W8i" userLabel="Exit" sceneMemberID="exit"/>
@@ -76,8 +75,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6au-HG-Ubr">
+                                <rect key="frame" x="168" y="76" width="38" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j9d-Ch-Deb">
-                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJ7-7m-BCo">
@@ -284,12 +289,6 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.corner" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6au-HG-Ubr">
-                                <rect key="frame" x="168" y="76" width="38" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
